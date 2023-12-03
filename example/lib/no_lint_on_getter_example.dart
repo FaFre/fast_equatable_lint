@@ -1,10 +1,13 @@
-import 'package:equatable/equatable.dart';
+import 'package:fast_equatable/fast_equatable.dart';
 
-class NoLintOnGetterExample extends Equatable {
-  const NoLintOnGetterExample();
+class NoLintOnGetterExample with FastEquatable {
+  NoLintOnGetterExample();
 
   bool get testGetter => false;
 
   @override
-  List<Object?> get props => [];
+  List<Object?> get hashParameters => [];
+
+  @override
+  bool get cacheHash => true;
 }

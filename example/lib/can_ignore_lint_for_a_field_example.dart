@@ -1,7 +1,7 @@
-import 'package:equatable/equatable.dart';
+import 'package:fast_equatable/fast_equatable.dart';
 
-class IgnoreOnePropExample extends Equatable {
-  const IgnoreOnePropExample({this.ignoredField, this.nonIgnoredField});
+class IgnoreOnePropExample with FastEquatable {
+  IgnoreOnePropExample({this.ignoredField, this.nonIgnoredField});
 
   // expect_lint: missing_field_in_equatable_props
   final String? ignoredField;
@@ -9,5 +9,8 @@ class IgnoreOnePropExample extends Equatable {
   final String? nonIgnoredField;
 
   @override
-  List<Object?> get props => [];
+  bool get cacheHash => true;
+
+  @override
+  List<Object?> get hashParameters => [];
 }

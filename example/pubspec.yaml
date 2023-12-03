@@ -1,17 +1,17 @@
-name: equatable_lint_example
-description: Package with every examples for the equatable_lint package
-version: 0.1.2
+name: fast_equatable_lint_example
+description: Package with every examples for the fast_equatable_lint package
+version: 0.1.0
 
 publish_to: none
 
 environment:
-  sdk: ">=2.19.0 <3.0.0"
+  sdk: ">3.0.0 <4.0.0"
 
 dependencies:
-  analyzer: ^5.4.0
-  equatable: ^2.0.5
+  analyzer: ^6.3.0
+  fast_equatable: ^1.1.0
 
 dev_dependencies:
-  custom_lint: ^0.2.12
-  equatable_lint:
+  custom_lint: ^0.5.7
+  fast_equatable_lint:
     path: ../

@@ -1,8 +1,8 @@
 // ignore_for_file: overridden_fields
 
-import 'package:equatable/equatable.dart';
+import 'package:fast_equatable/fast_equatable.dart';
 
-class FieldNotInPropsExample extends Equatable {
+class FieldNotInPropsExample with FastEquatable {
   FieldNotInPropsExample({this.field, this.field2});
 
   // A lint will appear because these fields are not in not in props
@@ -12,11 +12,22 @@ class FieldNotInPropsExample extends Equatable {
   final String? field2;
 
   @override
-  late final List<Object?> props = [];
+  late final List<Object?> hashParameters = [];
+
+  @override
+  bool get cacheHash => true;
 }
 
 class NoFieldToAddToPropsExample extends FieldNotInPropsExample {
   NoFieldToAddToPropsExample();
+
+  @override
+  // ignore: unnecessary_overrides
+  bool get cacheHash => super.cacheHash;
+
+  @override
+  // ignore: unnecessary_overrides
+  List<Object?> get hashParameters => super.hashParameters;
 }
 
 class OtherFieldToAddToPropsExample extends FieldNotInPropsExample {
@@ -29,5 +40,9 @@ class OtherFieldToAddToPropsExample extends FieldNotInPropsExample {
   final String? newField2;
 
   @override
-  late final List<Object?> props = super.props..addAll([]);
+  late final List<Object?> hashParameters = super.hashParameters..addAll([]);
+
+  @override
+  // ignore: unnecessary_overrides
+  bool get cacheHash => super.cacheHash;
 }
