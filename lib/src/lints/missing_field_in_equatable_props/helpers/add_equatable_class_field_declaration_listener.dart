@@ -16,8 +16,7 @@ extension AddEquatableClassFieldDeclarationListener on LintRuleNodeRegistry {
       required ClassDeclaration classNode,
       required List<FieldElement> watchableFields,
       required EquatablePropsExpressionDetails? equatablePropsExpressionDetails,
-    })
-        listener, {
+    }) listener, {
     bool Function(FieldDeclaration)? optionnalPreCheck,
   }) {
     addFieldDeclaration((fieldNode) {
@@ -40,7 +39,7 @@ extension AddEquatableClassFieldDeclarationListener on LintRuleNodeRegistry {
       }
 
       const typeChecker =
-          TypeChecker.fromName('Equatable', packageName: 'equatable');
+          TypeChecker.fromName('FastEquatable', packageName: 'fast_equatable');
       final classType = classElement.thisType;
 
       if (!typeChecker.isAssignableFromType(classType)) {

@@ -43,7 +43,7 @@ class AddEveryFieldsToEquatableProps extends DartFix {
         }
 
         final changeBuilder = reporter.createChangeBuilder(
-          message: 'add every missing fields to equatable props',
+          message: 'add every missing fields to FastEquatable hashParameters',
           priority: 90,
         );
 

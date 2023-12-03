@@ -28,7 +28,8 @@ class AddFieldToEquatableProps extends DartFix {
         }
 
         final changeBuilder = reporter.createChangeBuilder(
-          message: 'add ${fieldElement.displayName} to equatable props',
+          message:
+              'add ${fieldElement.displayName} to FastEquatable hashParameters',
           priority: 80,
         );
 

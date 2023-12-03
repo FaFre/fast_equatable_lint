@@ -14,7 +14,8 @@ class MissingFieldInEquatableProps extends DartLintRule {
 
   static const _code = LintCode(
     name: 'missing_field_in_equatable_props',
-    problemMessage: 'Every field of your class should be in equatable props',
+    problemMessage:
+        'Every field of your class should be in FastEquatable hashParameters',
   );
 
   @override

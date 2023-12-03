@@ -7,10 +7,12 @@ String getEquatablePropsOverrideWithFields({
   required bool hasOverrideEquatablePropsInSuperClass,
 }) {
   const override = '\n\n\t@override';
-  const equatablePropsGetterDefinition = '\n\tList<Object?> get props => ';
+  const equatablePropsGetterDefinition =
+      '\n\tList<Object?> get hashParameters => ';
 
-  final fieldsNamesPrefix =
-      hasOverrideEquatablePropsInSuperClass ? 'super.props..addAll(' : '';
+  final fieldsNamesPrefix = hasOverrideEquatablePropsInSuperClass
+      ? 'super.hashParameters..addAll('
+      : '';
   final fieldsNamesSuffix = hasOverrideEquatablePropsInSuperClass ? ')' : '';
 
   const end = ';\n';

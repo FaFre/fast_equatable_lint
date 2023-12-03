@@ -1,16 +1,15 @@
-name: equatable_lint
-version: 0.2.1
-description: This is a set of rules to make classes using Equatable more maintainable. We make sure here that every fields in an Equatable class is linked to the Equatable props getter.
-homepage: https://github.com/bamlab/equatable_lint
-repository: https://github.com/bamlab/equatable_lint
+name: fast_equatable_lint
+version: 0.1.0
+description: This is a set of rules to make classes using FastEquatable more maintainable. We make sure here that every fields in an FastEquatable class is linked to the FastEquatable hashParameters getter.
+homepage: https://github.com/FaFre/fast_equatable_lint
 
 environment:
-  sdk: ">=2.19.0 <3.0.0"
+  sdk: ">3.0.0 <4.0.0"
 
 dependencies:
-  analyzer: ^5.4.0
+  analyzer: ^6.3.0
   analyzer_plugin: ^0.11.2
   collection: ^1.16.0
-  custom_lint_builder: ^0.2.12
-  equatable: ^2.0.5
+  custom_lint_builder: ^0.5.7
+  fast_equatable: ^1.1.0
   source_gen: ^1.2.7

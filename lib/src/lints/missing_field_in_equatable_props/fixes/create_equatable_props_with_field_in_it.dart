@@ -37,7 +37,7 @@ class CreataEquatablePropsWithFieldInIt extends DartFix {
 
         final changeBuilder = reporter.createChangeBuilder(
           message:
-              'create equatable props override with ${fieldElement.displayName} in it',
+              'create FastEquatable hashParameters override with ${fieldElement.displayName} in it',
           priority: 80,
         );
 

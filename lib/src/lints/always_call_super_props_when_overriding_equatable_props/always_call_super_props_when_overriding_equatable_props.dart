@@ -12,7 +12,7 @@ class AlwaysCallSuperPropsWhenOverridingEquatableProps extends DartLintRule {
   static const _code = LintCode(
     name: 'always_call_super_props_when_overriding_equatable_props',
     problemMessage:
-        'Dont forget to call super.props when overriding equatable props',
+        'Dont forget to call super.hashParameters when overriding FastEquatable hashParameters',
   );
 
   @override

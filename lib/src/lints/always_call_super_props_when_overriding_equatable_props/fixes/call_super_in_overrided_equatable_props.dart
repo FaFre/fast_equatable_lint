@@ -22,7 +22,7 @@ class CallSuperInOverridedEquatableProps extends DartFix {
         required equatablePropsExpressionDetails,
       }) {
         final changeBuilder = reporter.createChangeBuilder(
-          message: 'call super in overrided equatable props',
+          message: 'call super in overrided FastEquatable hashParameters',
           priority: 90,
         );
 
@@ -32,7 +32,7 @@ class CallSuperInOverridedEquatableProps extends DartFix {
               equatablePropsExpressionDetails.offset,
               equatablePropsExpressionDetails.length,
             ),
-            '${equatablePropsExpressionDetails.initialPart}super.props..addAll(${convertFieldsNamesToSingleString(
+            '${equatablePropsExpressionDetails.initialPart}super.hashParameters..addAll(${convertFieldsNamesToSingleString(
               equatablePropsExpressionDetails.fieldsNames,
             )})${equatablePropsExpressionDetails.lastPart}',
           );

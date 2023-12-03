@@ -1,2 +1,2 @@
 /// Equatable props field displayName
-const equatablePropsFieldName = 'props';
+const equatablePropsFieldName = 'hashParameters';

@@ -44,7 +44,8 @@ class CreataEquatablePropsWithEveryFieldsInIt extends DartFix {
         }
 
         final changeBuilder = reporter.createChangeBuilder(
-          message: 'create equatable props override with every fields in it',
+          message:
+              'create FastEquatable hashParameters override with every fields in it',
           priority: 90,
         );
 

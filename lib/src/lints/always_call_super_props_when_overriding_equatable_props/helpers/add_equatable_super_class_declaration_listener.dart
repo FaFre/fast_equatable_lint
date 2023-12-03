@@ -12,8 +12,7 @@ extension AddEquatableSuperClassDeclarationListener on LintRuleNodeRegistry {
       required ClassDeclaration classNode,
       required ClassMember equatablePropsClassMember,
       required EquatablePropsExpressionDetails equatablePropsExpressionDetails,
-    })
-        listener, {
+    }) listener, {
     bool Function(ClassDeclaration)? optionnalPreCheck,
   }) {
     addClassDeclaration((classNode) {
@@ -45,7 +44,7 @@ extension AddEquatableSuperClassDeclarationListener on LintRuleNodeRegistry {
       }
 
       final doesPropsCallSuper =
-          equatablePropsClassMember.toString().contains('super.props');
+          equatablePropsClassMember.toString().contains('super.hashParameters');
 
       if (doesPropsCallSuper) {
         return;

@@ -4,10 +4,10 @@ import 'src/lints/always_call_super_props_when_overriding_equatable_props/always
 import 'src/lints/missing_field_in_equatable_props/missing_field_in_equatable_props.dart';
 
 /// Entry point for the Equatable lint plugin
-EquatableLint createPlugin() => EquatableLint();
+FastEquatableLint createPlugin() => FastEquatableLint();
 
 /// Equatable lint plugin base class
-class EquatableLint extends PluginBase {
+class FastEquatableLint extends PluginBase {
   @override
   List<LintRule> getLintRules(CustomLintConfigs configs) => [
         const MissingFieldInEquatableProps(),
