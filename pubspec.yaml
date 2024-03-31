@@ -1,5 +1,5 @@
 name: fast_equatable_lint
-version: 0.1.0
+version: 0.3.0
 description: This is a set of rules to make classes using FastEquatable more maintainable. We validate that every fields in an FastEquatable class is linked to the hashParameters getter.
 homepage: https://github.com/FaFre/fast_equatable_lint
 
@@ -10,6 +10,6 @@ dependencies:
   analyzer: ^6.3.0
   analyzer_plugin: ^0.11.2
   collection: ^1.16.0
-  custom_lint_builder: ^0.5.7
+  custom_lint_builder: ^0.6.4
   fast_equatable: ^1.1.0
   source_gen: ^1.2.7

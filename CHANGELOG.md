@@ -1,3 +1,8 @@
+## 0.3.0
+
+- Migrated to fast_equatable
+- Upgraded deps
+
 ## 0.2.1
 
 - Add "add every missing fields" dart fix for "missing_field_in_equatable_props" lint

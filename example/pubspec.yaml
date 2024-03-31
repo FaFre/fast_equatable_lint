@@ -12,6 +12,6 @@ dependencies:
   fast_equatable: ^1.1.0
 
 dev_dependencies:
-  custom_lint: ^0.5.7
+  custom_lint: ^0.6.4
   fast_equatable_lint:
     path: ../
