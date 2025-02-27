@@ -1,3 +1,10 @@
+## 0.3.1
+
+- Upgraded `analyzer`
+- Upgraded `analyzer_plugin`
+- Upgraded `custom_lint_builder`
+- Upgraded `source_gen`
+
 ## 0.3.0
 
 - Migrated to fast_equatable
