@@ -20,7 +20,8 @@ class NeedToCallSuperWhenOverridingPropsExample extends BaseEquatableClass {
   // A lint will appear here because props doesn't call super.props
   // So it doesn't count fields defined in NewFieldNotInPropsExample class
   @override
-  List<Object?> get hashParameters => [super.hashParameters, newField];
+  // ignore: must_call_super
+  List<Object?> get hashParameters => [newField];
 
   @override
   bool get cacheHash => true;

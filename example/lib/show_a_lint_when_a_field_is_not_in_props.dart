@@ -31,7 +31,7 @@ class OtherFieldToAddToPropsExample extends FieldNotInPropsExample {
   final String? newField;
 
   @override
-  List<Object?> get hashParameters => super.hashParameters..addAll([]);
+  List<Object?> get hashParameters => super.hashParameters..addAll([newField]);
 
   @override
   // ignore: unnecessary_overrides
