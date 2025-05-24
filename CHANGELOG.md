@@ -1,3 +1,7 @@
+## 0.3.2
+
+- Upgraded `analyzer_plugin`
+
 ## 0.3.1
 
 - Upgraded `analyzer`
