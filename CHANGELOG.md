@@ -1,3 +1,8 @@
+## 0.4.0
+
+- Support new `analyzer`
+- Upgraded deps
+
 ## 0.3.2
 
 - Upgraded `analyzer_plugin`
