@@ -1,3 +1,7 @@
+## 0.4.2
+
+- Downgrade `custom_lint_builder` for extended compatibility
+
 ## 0.4.1
 
 - Downgrade `source_gen` for extended compatibility
