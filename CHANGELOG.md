@@ -1,3 +1,7 @@
+## 0.4.1
+
+- Downgrade `source_gen` for extended compatibility
+
 ## 0.4.0
 
 - Support new `analyzer`
