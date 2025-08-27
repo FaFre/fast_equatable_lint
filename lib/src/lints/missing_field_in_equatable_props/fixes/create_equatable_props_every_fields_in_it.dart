@@ -30,7 +30,7 @@ class CreataEquatablePropsWithEveryFieldsInIt extends DartFix {
         }
 
         final classSuperTypeElement =
-            classNode.declaredElement!.supertype?.element;
+            classNode.declaredFragment!.element.supertype?.element3;
 
         if (classSuperTypeElement == null) {
           return;

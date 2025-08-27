@@ -1,5 +1,5 @@
 import 'package:analyzer/dart/ast/ast.dart';
-import 'package:analyzer/dart/element/element.dart';
+import 'package:analyzer/dart/element/element2.dart';
 import 'package:collection/collection.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
@@ -12,9 +12,9 @@ extension AddEquatableClassFieldDeclarationListener on LintRuleNodeRegistry {
   void addEquatableClassFieldDeclaration(
     void Function({
       required FieldDeclaration fieldNode,
-      required FieldElement fieldElement,
+      required FieldElement2 fieldElement,
       required ClassDeclaration classNode,
-      required List<FieldElement> watchableFields,
+      required List<FieldElement2> watchableFields,
       required EquatablePropsExpressionDetails? equatablePropsExpressionDetails,
     }) listener, {
     bool Function(FieldDeclaration)? optionnalPreCheck,
@@ -33,7 +33,7 @@ extension AddEquatableClassFieldDeclarationListener on LintRuleNodeRegistry {
         return;
       }
 
-      final classElement = classNode.declaredElement;
+      final classElement = classNode.declaredFragment?.element;
       if (classElement == null) {
         return;
       }
@@ -46,7 +46,7 @@ extension AddEquatableClassFieldDeclarationListener on LintRuleNodeRegistry {
         return;
       }
 
-      final watchableFields = classElement.fields
+      final watchableFields = classElement.fields2
           .where((field) => !field.isSynthetic)
           .where((field) => !field.isStatic)
           .where((field) => field.displayName != equatablePropsFieldName)
