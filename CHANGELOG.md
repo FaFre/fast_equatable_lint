@@ -1,3 +1,7 @@
+## 0.5.0
+
+- Update constraints
+
 ## 0.4.2
 
 - Downgrade `custom_lint_builder` for extended compatibility
